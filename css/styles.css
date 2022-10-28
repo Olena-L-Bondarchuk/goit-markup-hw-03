@@ -1,24 +1,21 @@
-/* 
-
-Основний колір тексту #212121
-Додатковий колір тексту #757575
-Колір акценту фон+текст #2196F3 
-Колір адреси+фон хедер #FFFFFF
-колір фону основний #F5F5F5
-колір фону футер #2F303A
-фон кнопок основний #F5F4FA
-*/
 :root {
+  /* Text colors */
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --secondary-text-color: #ffffff;
+
+  /* BG colors */
   --primary-bgc: #ffffff;
   --secondary-bgc: #2f303a;
   --button-bgc: #f5f4fa;
 }
 
-body {
+/* *
+  |============================
+  | Base styles
+  |============================
+* body {
   color: var(--primary-text-color);
   background-color: var(--primary-bgc);
   font-family: 'Roboto', sans-serif;
@@ -26,7 +23,34 @@ body {
   font-size: 14px;
 }
 
-/*---------------------Хедер -------------------- */
+/* reset start */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0;
+}
+
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+/* reset end */
+
+/* Header */
 .logo-nav {
   color: var(--accent-color);
   font-family: 'Raleway', 'Courier New', Courier, monospace;
@@ -43,13 +67,9 @@ body {
 .header-bgc {
   background-color: #ffffff;
 }
-
-.list {
-  list-style-type: none;
-}
-.link {
-  text-decoration: none;
-}
+/* .site-nav {
+  outline: solid 2px tomato;
+} */
 .nav-list :hover,
 .nav-list :focus {
   color: var(--accent-color);
@@ -64,6 +84,7 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* Header contacts */
 .contacts-mail {
   color: inherit;
   font-weight: 500;
@@ -87,7 +108,9 @@ body {
   color: var(--accent-color);
 }
 
-/* ---------------Main Студія -----------------------------*/
+/* Main studio*/
+
+/* Hero */
 .section-hero {
   background-color: var(--secondary-bgc);
 }
@@ -99,6 +122,8 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin-bottom: 30px;
 }
 .hero-button {
   color: var(--secondary-text-color);
@@ -112,17 +137,24 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  padding: 8px 30px;
+  min-width: 160px;
+  min-height: 40px;
 }
 .hero-button:hover,
 .hero-button:focus {
   color: #188ce8;
 }
-/* .title-studio --раніше було записано*/
+/* Preference section*/
 .section-title {
   color: var(--title-text-color);
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
+
+  margin-bottom: 50px;
 }
 
 .preference-title {
@@ -131,11 +163,15 @@ body {
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
 .preference-text {
   font-size: 14px;
   line-height: calc(24 / 14);
 }
+
+/* Team section */
 .team-bgc {
   background-color: var(--button-bgc);
 }
@@ -145,13 +181,15 @@ body {
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
+
+  margin-bottom: 10px;
 }
 .team-text {
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
 }
-/*----------------------- Main Портфоліо---------------------- */
+/* Main Portfolio*/
 
 .visually-hidden {
   position: absolute;
@@ -168,7 +206,7 @@ body {
 .section-portfolio {
   background-color: var(--primary-bgc);
 }
-
+/* Filters section */
 .filters-item {
   color: var(--title-text-color);
   background-color: var(--button-bgc);
@@ -179,6 +217,11 @@ body {
   text-align: center;
   border-radius: 4px;
   font-family: inherit;
+
+  border-radius: 4px;
+  padding: 4px 20px;
+  min-width: 160px;
+  min-height: 40px;
 }
 
 .filters-item:hover,
@@ -199,7 +242,7 @@ body {
   line-height: calc(30 / 16);
 }
 
-/* --------------Footer------------ */
+/* Footer */
 .logo-footer {
   color: var(--accent-color);
   font-family: 'Raleway', sans-serif;
@@ -208,6 +251,9 @@ body {
   font-size: 26px;
   line-height: calc(31 / 26);
   text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+  outline: solid 2px tomato;
 }
 .logo-footer > span {
   color: var(--secondary-text-color);
@@ -216,29 +262,29 @@ body {
 .footer-bgc {
   background-color: var(--secondary-bgc);
 }
-.contacts-footer-address {
-  color: var(--secondary-text-color);
+
+/* Footer contacts */
+.contacts {
   font-style: normal;
   line-height: calc(24 / 14);
+  margin-bottom: 9px;
+}
+.contacts-footer-address {
+  color: var(--secondary-text-color);
 }
 
 .contacts-footer-mail {
   color: inherit;
-  font-style: normal;
   font-size: 14px;
-  line-height: calc(24 / 14);
 }
 .contacts-footer-mail:hover,
-.contacts-footer-mail:focus {
+.contacts-footer-mail:focus,
+.contacts-footer-tel:hover,
+.contacts-footer-tel:focus {
   color: var(--accent-color);
 }
 .contacts-footer-tel {
   color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
   font-size: 14px;
-  line-height: calc(24 / 14);
-}
-.contacts-footer-tel:hover,
-.contacts-footer-tel:focus {
-  color: var(--accent-color);
+  margin-bottom: 0;
 }
