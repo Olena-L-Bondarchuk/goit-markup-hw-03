@@ -310,10 +310,10 @@ img {
   font-size: 26px;
   line-height: calc(31 / 26);
   text-decoration: none;
+  display: block;
   margin-bottom: 20px;
-  display: inline-block;
-  outline: solid 2px tomato;
 }
+
 .logo-footer > span {
   color: var(--secondary-text-color);
 }
