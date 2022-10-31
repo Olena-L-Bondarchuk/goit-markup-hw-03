@@ -9,13 +9,13 @@
   --primary-bgc: #ffffff;
   --secondary-bgc: #2f303a;
   --button-bgc: #f5f4fa;
+  --team-bgc: #f5f4fa;
 }
 
-/* *
-  |============================
-  | Base styles
-  |============================
-* body {
+/* 
+Base styles */
+
+body {
   color: var(--primary-text-color);
   background-color: var(--primary-bgc);
   font-family: 'Roboto', sans-serif;
@@ -36,7 +36,7 @@ p {
 
 .link {
   text-decoration: none;
-  color: currentColor;
+  color: inherit;
 }
 
 .list {
@@ -47,10 +47,28 @@ p {
 
 img {
   display: block;
+  /* max-width: 100%;
+  height: auto; */
 }
 /* reset end */
 
 /* Header */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--secondary-bgc);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
 .logo-nav {
   color: var(--accent-color);
   font-family: 'Raleway', 'Courier New', Courier, monospace;
@@ -59,17 +77,17 @@ img {
   font-size: 26px;
   line-height: 31px;
   text-decoration: none;
+  margin-right: 93px;
 }
 
 .logo-nav > span {
   color: var(--title-text-color);
 }
-.header-bgc {
-  background-color: #ffffff;
+
+.nav-list {
+  display: flex;
+  gap: 50px;
 }
-/* .site-nav {
-  outline: solid 2px tomato;
-} */
 .nav-list :hover,
 .nav-list :focus {
   color: var(--accent-color);
@@ -84,7 +102,12 @@ img {
   letter-spacing: 0.02em;
 }
 
-/* Header contacts */
+.header-contacts {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
 .contacts-mail {
   color: inherit;
   font-weight: 500;
@@ -99,7 +122,6 @@ img {
 .contacts-tel {
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02;
 }
@@ -110,9 +132,21 @@ img {
 
 /* Main studio*/
 
+/* Загальна настройка заголовків */
+.section-title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 /* Hero */
 .section-hero {
   background-color: var(--secondary-bgc);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   color: var(--secondary-text-color);
@@ -123,8 +157,12 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
+  width: 696px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 30px;
 }
+
 .hero-button {
   color: var(--secondary-text-color);
   background-color: var(--accent-color);
@@ -133,28 +171,32 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
 
   border-radius: 4px;
-  padding: 8px 30px;
+  border-color: transparent;
+  padding: 10px 32px;
   min-width: 160px;
-  min-height: 40px;
+  min-height: 38px;
+  display: inline-block;
 }
+
 .hero-button:hover,
 .hero-button:focus {
   color: #188ce8;
 }
 /* Preference section*/
-.section-title {
-  color: var(--title-text-color);
-  font-size: 36px;
-  line-height: calc(42 / 36);
-  text-align: center;
+.preference {
+  padding-top: 92px;
+}
 
-  margin-bottom: 50px;
+.preference .container {
+  padding: 0 215px;
+}
+
+.preference-list {
+  display: flex;
+  gap: 30px;
 }
 
 .preference-title {
@@ -163,17 +205,34 @@ img {
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   margin-bottom: 10px;
 }
+
 .preference-text {
   font-size: 14px;
   line-height: calc(24 / 14);
 }
 
+/* Examples section */
+.examples {
+  padding-top: 94px;
+}
+.examples-list {
+  display: flex;
+  gap: 32px;
+  padding-top: 50px;
+}
 /* Team section */
-.team-bgc {
-  background-color: var(--button-bgc);
+.team {
+  background-color: var(--team-bgc);
+  padding-top: 94px;
+}
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+.team-item {
+  padding-bottom: 30px;
 }
 .team-title {
   color: var(--title-text-color);
@@ -181,7 +240,7 @@ img {
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
-
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 .team-text {

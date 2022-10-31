@@ -27,7 +27,7 @@
   <body>
     <!-- Header section -->
     <header>
-      <div class="header-bgc">
+      <div class="header container">
         <nav class="site-nav">
           <a href="./index.html" class="logo-nav">Web<span>Studio</span></a>
           <ul class="nav-list list">
@@ -36,11 +36,13 @@
             <li><a href="" class="nav-item link">Контакти</a></li>
           </ul>
         </nav>
-        <ul class="сontaсts list">
-          <li>
+        <ul class="header-contacts list">
+          <li class="contacts-item">
             <a href="mailto:info@devstudio.com" class="contacts-mail link">info@devstudio.com</a>
           </li>
-          <li><a href="tel:+380961111111" class="contacts-tel link">+38 096 111 11 11</a></li>
+          <li class="contacts-item">
+            <a href="tel:+380961111111" class="contacts-tel link">+38 096 111 11 11</a>
+          </li>
         </ul>
       </div>
     </header>
@@ -48,72 +50,78 @@
     <main>
       <!-- Hero section -->
       <section class="section-hero">
-        <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="hero-button">Замовити послугу</button>
+        <div class="container">
+          <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
+          <button type="button" class="hero-button">Замовити послугу</button>
+        </div>
       </section>
       <section>
-        <h2 class="section-title visually-hidden">Наші переваги</h2>
-        <ul class="preference list">
-          <li>
-            <h3 class="preference-title">Увага до деталей</h3>
-            <p class="preference-text">
-              Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
-            </p>
-          </li>
-          <li>
-            <h3 class="preference-title">Пунктуальність</h3>
-            <p class="preference-text">
-              Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
-            </p>
-          </li>
-          <li>
-            <h3 class="preference-title">Планування</h3>
-            <p class="preference-text">
-              Так само консультація з широким активом значною мірою зумовлює.
-            </p>
-          </li>
-          <li>
-            <h3 class="preference-title">Сучасні технології</h3>
-            <p class="preference-text">
-              Значимість цих проблем настільки очевидна, що реалізація планових завдань.
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2 class="section-title">Чим ми займаємося</h2>
-        <ul class="examples list">
-          <li>
-            <img
-              src="./images/studia/img-1.jpg"
-              alt="набирають текст на клавіатурі перед планшетом"
-              width="370"
-              height="294"
-            />
-          </li>
-          <li>
-            <img
-              src="./images/studia/box-2.jpg"
-              alt="перед ноутбуком тримають в руках телефон"
-              width="370"
-              height="294"
-            />
-          </li>
-          <li>
-            <img
-              src="./images/studia/box-3.jpg"
-              alt="в руках тримають планшет і олівець"
-              width="370"
-              height="294"
-            />
-          </li>
-        </ul>
-      </section>
-      <section>
-        <div class="team-bgc">
-          <h2 class="section-title">Наша команда</h2>
-          <ul class="team list">
+        <div class="preference container">
+          <h2 class="section-title visually-hidden">Наші переваги</h2>
+          <ul class="preference-list list">
             <li>
+              <h3 class="preference-title">Увага до деталей</h3>
+              <p class="preference-text">
+                Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
+              </p>
+            </li>
+            <li>
+              <h3 class="preference-title">Пунктуальність</h3>
+              <p class="preference-text">
+                Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
+              </p>
+            </li>
+            <li>
+              <h3 class="preference-title">Планування</h3>
+              <p class="preference-text">
+                Так само консультація з широким активом значною мірою зумовлює.
+              </p>
+            </li>
+            <li>
+              <h3 class="preference-title">Сучасні технології</h3>
+              <p class="preference-text">
+                Значимість цих проблем настільки очевидна, що реалізація планових завдань.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="examples container">
+          <h2 class="section-title">Чим ми займаємося</h2>
+          <ul class="examples-list list">
+            <li>
+              <img
+                src="./images/studia/img-1.jpg"
+                alt="набирають текст на клавіатурі перед планшетом"
+                width="370"
+                height="294"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/studia/box-2.jpg"
+                alt="перед ноутбуком тримають в руках телефон"
+                width="370"
+                height="294"
+              />
+            </li>
+            <li>
+              <img
+                src="./images/studia/box-3.jpg"
+                alt="в руках тримають планшет і олівець"
+                width="370"
+                height="294"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="team container">
+          <h2 class="section-title">Наша команда</h2>
+          <ul class="team-list list">
+            <li class="team-item">
               <img
                 src="./images/studia/team1.jpg"
                 alt="співробітник-дизайнер"
@@ -123,7 +131,7 @@
               <h3 class="team-title">Ігор Дем'яненко</h3>
               <p lang="en" class="team-text">Product Designer</p>
             </li>
-            <li>
+            <li class="team-item">
               <img
                 src="./images/studia/team2.jpg"
                 alt="співробітник-фронтенд"
@@ -133,7 +141,7 @@
               <h3 class="team-title">Ольга Рєпіна</h3>
               <p lang="en" class="team-text">Frontend Developer</p>
             </li>
-            <li>
+            <li class="team-item">
               <img
                 src="./images/studia/team3.jpg"
                 alt="співробітник-маркетинг"
